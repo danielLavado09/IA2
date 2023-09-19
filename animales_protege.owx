@@ -13,8 +13,302 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#acuatico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#aguila_arpia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#anfibio"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#animal"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="#ave"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#flamenco"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#habitat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#iguana_verde"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#jaguar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#mamifero"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ocelote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pez"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#pez_payaso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#piraña"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#rana_de_cristal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#reptil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#salamandra_andina"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sangre_caliente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sangre_fria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#serpiente_coral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#terrestre"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#es_depredador_de"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#es_habitat_de"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#habita_en"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#se_mantiene_caliente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#se_mantiene_frio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tiene_sangre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#peso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tamaño"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#aguila_arpia"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_depredador_de"/>
+            <Class IRI="#pez_payaso"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#anfibio"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tiene_sangre"/>
+            <Class IRI="#sangre_fria"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#animal"/>
+        <ObjectMaxCardinality cardinality="2">
+            <ObjectProperty IRI="#habita_en"/>
+            <Class IRI="#habitat"/>
+        </ObjectMaxCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ave"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tiene_sangre"/>
+            <Class IRI="#sangre_caliente"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#habitat"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#es_habitat_de"/>
+            <Class IRI="#animal"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#mamifero"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tiene_sangre"/>
+            <Class IRI="#sangre_caliente"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ocelote"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_depredador_de"/>
+            <Class IRI="#serpiente_coral"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#pez"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tiene_sangre"/>
+            <Class IRI="#sangre_fria"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#reptil"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tiene_sangre"/>
+            <Class IRI="#sangre_fria"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#acuatico"/>
+        <Class IRI="#habitat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#aguila_arpia"/>
+        <Class IRI="#ave"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#anfibio"/>
+        <Class IRI="#sangre_fria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ave"/>
+        <Class IRI="#sangre_caliente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#flamenco"/>
+        <Class IRI="#ave"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iguana_verde"/>
+        <Class IRI="#reptil"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#jaguar"/>
+        <Class IRI="#mamifero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#mamifero"/>
+        <Class IRI="#sangre_caliente"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ocelote"/>
+        <Class IRI="#mamifero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pez"/>
+        <Class IRI="#sangre_fria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#pez_payaso"/>
+        <Class IRI="#pez"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#piraña"/>
+        <Class IRI="#pez"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#rana_de_cristal"/>
+        <Class IRI="#anfibio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#reptil"/>
+        <Class IRI="#sangre_fria"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#salamandra_andina"/>
+        <Class IRI="#anfibio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sangre_caliente"/>
+        <Class IRI="#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sangre_fria"/>
+        <Class IRI="#animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#serpiente_coral"/>
+        <Class IRI="#reptil"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#terrestre"/>
+        <Class IRI="#habitat"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#animal"/>
+        <Class IRI="#habitat"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#es_habitat_de"/>
+        <ObjectProperty IRI="#habita_en"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#tiene_sangre"/>
+    </FunctionalObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#se_mantiene_caliente"/>
+    </ReflexiveObjectProperty>
+    <ReflexiveObjectProperty>
+        <ObjectProperty IRI="#se_mantiene_frio"/>
+    </ReflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#es_depredador_de"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_depredador_de"/>
+        <Class IRI="#aguila_arpia"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_depredador_de"/>
+        <Class IRI="#ocelote"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_habitat_de"/>
+        <Class IRI="#habitat"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#habita_en"/>
+        <Class IRI="#animal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#se_mantiene_caliente"/>
+        <Class IRI="#sangre_caliente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#se_mantiene_frio"/>
+        <Class IRI="#sangre_fria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_depredador_de"/>
+        <Class IRI="#pez_payaso"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_depredador_de"/>
+        <Class IRI="#serpiente_coral"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_habitat_de"/>
+        <Class IRI="#animal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#habita_en"/>
+        <Class IRI="#habitat"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_sangre"/>
+        <Class IRI="#sangre_caliente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_sangre"/>
+        <Class IRI="#sangre_fria"/>
+    </ObjectPropertyRange>
 </Ontology>
 
 
