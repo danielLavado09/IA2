@@ -28,6 +28,21 @@
         <Class IRI="#ave"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#caiman_de_anteojos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cocodrilo_de_tumbes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#cotinga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#delfin_rosado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dorado"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#flamenco"/>
     </Declaration>
     <Declaration>
@@ -40,10 +55,19 @@
         <Class IRI="#jaguar"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#loro_real_amazonico"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#mamifero"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ocelote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#oso_de_anteojos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#perico_carisucio"/>
     </Declaration>
     <Declaration>
         <Class IRI="#pez"/>
@@ -52,7 +76,13 @@
         <Class IRI="#pez_payaso"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#pez_sierra"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#piraña"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#puma"/>
     </Declaration>
     <Declaration>
         <Class IRI="#rana_de_cristal"/>
@@ -70,16 +100,34 @@
         <Class IRI="#sangre_fria"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#sapo_corredor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sapo_diminuto_de_hojarasca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sapo_pintado"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#serpiente_coral"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#tapir"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#terrestre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#tortuga_charapa"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#es_depredador_de"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#es_habitat_de"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#es_similar_a"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#habita_en"/>
@@ -92,6 +140,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#tiene_sangre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#edad"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#nombre"/>
@@ -165,6 +216,34 @@
             <Class IRI="#sangre_fria"/>
         </ObjectAllValuesFrom>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sangre_caliente"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#se_mantiene_caliente"/>
+            <Class IRI="#sangre_caliente"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sangre_fria"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#se_mantiene_frio"/>
+            <Class IRI="#sangre_fria"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sapo_corredor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_similar_a"/>
+            <Class IRI="#sapo_diminuto_de_hojarasca"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sapo_diminuto_de_hojarasca"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_similar_a"/>
+            <Class IRI="#sapo_corredor"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#acuatico"/>
         <Class IRI="#habitat"/>
@@ -182,6 +261,26 @@
         <Class IRI="#sangre_caliente"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#caiman_de_anteojos"/>
+        <Class IRI="#reptil"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cocodrilo_de_tumbes"/>
+        <Class IRI="#reptil"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#cotinga"/>
+        <Class IRI="#ave"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#delfin_rosado"/>
+        <Class IRI="#pez"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dorado"/>
+        <Class IRI="#pez"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#flamenco"/>
         <Class IRI="#ave"/>
     </SubClassOf>
@@ -194,12 +293,24 @@
         <Class IRI="#mamifero"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#loro_real_amazonico"/>
+        <Class IRI="#ave"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#mamifero"/>
         <Class IRI="#sangre_caliente"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ocelote"/>
         <Class IRI="#mamifero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#oso_de_anteojos"/>
+        <Class IRI="#mamifero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#perico_carisucio"/>
+        <Class IRI="#ave"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#pez"/>
@@ -210,8 +321,16 @@
         <Class IRI="#pez"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#pez_sierra"/>
+        <Class IRI="#pez"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#piraña"/>
         <Class IRI="#pez"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#puma"/>
+        <Class IRI="#mamifero"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#rana_de_cristal"/>
@@ -234,12 +353,32 @@
         <Class IRI="#animal"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#sapo_corredor"/>
+        <Class IRI="#anfibio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sapo_diminuto_de_hojarasca"/>
+        <Class IRI="#anfibio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sapo_pintado"/>
+        <Class IRI="#anfibio"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#serpiente_coral"/>
         <Class IRI="#reptil"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#tapir"/>
+        <Class IRI="#mamifero"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#terrestre"/>
         <Class IRI="#habitat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#tortuga_charapa"/>
+        <Class IRI="#reptil"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#animal"/>
@@ -252,6 +391,12 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#tiene_sangre"/>
     </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#es_similar_a"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#es_depredador_de"/>
+    </AsymmetricObjectProperty>
     <ReflexiveObjectProperty>
         <ObjectProperty IRI="#se_mantiene_caliente"/>
     </ReflexiveObjectProperty>
@@ -272,6 +417,26 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#es_habitat_de"/>
         <Class IRI="#habitat"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#anfibio"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#ave"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#mamifero"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#pez"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#reptil"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#habita_en"/>
@@ -298,6 +463,26 @@
         <Class IRI="#animal"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#anfibio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#ave"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#mamifero"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#pez"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_similar_a"/>
+        <Class IRI="#reptil"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#habita_en"/>
         <Class IRI="#habitat"/>
     </ObjectPropertyRange>
@@ -309,6 +494,42 @@
         <ObjectProperty IRI="#tiene_sangre"/>
         <Class IRI="#sangre_fria"/>
     </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#edad"/>
+        <Class IRI="#animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre"/>
+        <Class IRI="#animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre"/>
+        <Class IRI="#habitat"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#peso"/>
+        <Class IRI="#animal"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tamaño"/>
+        <Class IRI="#animal"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#edad"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#peso"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tamaño"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
 </Ontology>
 
 
