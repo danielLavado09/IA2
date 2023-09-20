@@ -13,9 +13,6 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="#acuatico"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#aguila_arpia"/>
     </Declaration>
     <Declaration>
@@ -67,6 +64,12 @@
         <Class IRI="#oso_de_anteojos"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#parte_anatomica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#patas"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#perico_carisucio"/>
     </Declaration>
     <Declaration>
@@ -115,9 +118,6 @@
         <Class IRI="#tapir"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#terrestre"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#tortuga_charapa"/>
     </Declaration>
     <Declaration>
@@ -125,6 +125,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#es_habitat_de"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#es_sangre_de_tipo"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#es_similar_a"/>
@@ -137,6 +140,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#se_mantiene_frio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#tiene_sangre"/>
@@ -152,6 +158,12 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#tamaño"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#acuatico"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#terrestre"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#aguila_arpia"/>
@@ -169,6 +181,14 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#animal"/>
+        <Class IRI="#sangre_caliente"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#animal"/>
+        <Class IRI="#sangre_fria"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#animal"/>
         <ObjectMaxCardinality cardinality="2">
             <ObjectProperty IRI="#habita_en"/>
             <Class IRI="#habitat"/>
@@ -183,10 +203,24 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#habitat"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#acuatico"/>
+            <NamedIndividual IRI="#terrestre"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#habitat"/>
         <ObjectMinCardinality cardinality="1">
             <ObjectProperty IRI="#es_habitat_de"/>
             <Class IRI="#animal"/>
         </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#jaguar"/>
+        <ObjectExactCardinality cardinality="4">
+            <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
+            <Class IRI="#patas"/>
+        </ObjectExactCardinality>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#mamifero"/>
@@ -203,11 +237,32 @@
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class IRI="#ocelote"/>
+        <ObjectExactCardinality cardinality="4">
+            <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
+            <Class IRI="#patas"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#oso_de_anteojos"/>
+        <ObjectExactCardinality cardinality="4">
+            <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
+            <Class IRI="#patas"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class IRI="#pez"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#tiene_sangre"/>
             <Class IRI="#sangre_fria"/>
         </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#puma"/>
+        <ObjectExactCardinality cardinality="4">
+            <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
+            <Class IRI="#patas"/>
+        </ObjectExactCardinality>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#reptil"/>
@@ -218,10 +273,45 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#sangre_caliente"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_sangre_de_tipo"/>
+            <Class IRI="#ave"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sangre_caliente"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_sangre_de_tipo"/>
+            <Class IRI="#mamifero"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sangre_caliente"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="#se_mantiene_caliente"/>
             <Class IRI="#sangre_caliente"/>
         </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sangre_fria"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_sangre_de_tipo"/>
+            <Class IRI="#anfibio"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sangre_fria"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_sangre_de_tipo"/>
+            <Class IRI="#pez"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#sangre_fria"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_sangre_de_tipo"/>
+            <Class IRI="#reptil"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#sangre_fria"/>
@@ -244,10 +334,20 @@
             <Class IRI="#sapo_corredor"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="#acuatico"/>
-        <Class IRI="#habitat"/>
-    </SubClassOf>
+    <EquivalentClasses>
+        <Class IRI="#sapo_pintado"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#es_similar_a"/>
+            <Class IRI="#sapo_diminuto_de_hojarasca"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#tapir"/>
+        <ObjectExactCardinality cardinality="4">
+            <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
+            <Class IRI="#patas"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#aguila_arpia"/>
         <Class IRI="#ave"/>
@@ -307,6 +407,10 @@
     <SubClassOf>
         <Class IRI="#oso_de_anteojos"/>
         <Class IRI="#mamifero"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#patas"/>
+        <Class IRI="#parte_anatomica"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#perico_carisucio"/>
@@ -373,10 +477,6 @@
         <Class IRI="#mamifero"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#terrestre"/>
-        <Class IRI="#habitat"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#tortuga_charapa"/>
         <Class IRI="#reptil"/>
     </SubClassOf>
@@ -384,6 +484,18 @@
         <Class IRI="#animal"/>
         <Class IRI="#habitat"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#habitat"/>
+        <NamedIndividual IRI="#acuatico"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#habitat"/>
+        <NamedIndividual IRI="#terrestre"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#es_sangre_de_tipo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#es_habitat_de"/>
         <ObjectProperty IRI="#habita_en"/>
@@ -391,12 +503,18 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#tiene_sangre"/>
     </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#es_sangre_de_tipo"/>
+    </InverseFunctionalObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#es_similar_a"/>
     </SymmetricObjectProperty>
     <AsymmetricObjectProperty>
         <ObjectProperty IRI="#es_depredador_de"/>
     </AsymmetricObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#es_similar_a"/>
+    </TransitiveObjectProperty>
     <ReflexiveObjectProperty>
         <ObjectProperty IRI="#se_mantiene_caliente"/>
     </ReflexiveObjectProperty>
@@ -417,6 +535,14 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#es_habitat_de"/>
         <Class IRI="#habitat"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_sangre_de_tipo"/>
+        <Class IRI="#sangre_caliente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#es_sangre_de_tipo"/>
+        <Class IRI="#sangre_fria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#es_similar_a"/>
@@ -450,6 +576,10 @@
         <ObjectProperty IRI="#se_mantiene_frio"/>
         <Class IRI="#sangre_fria"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
+        <Class IRI="#parte_anatomica"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#es_depredador_de"/>
         <Class IRI="#pez_payaso"/>
@@ -460,6 +590,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#es_habitat_de"/>
+        <Class IRI="#animal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#es_sangre_de_tipo"/>
         <Class IRI="#animal"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -485,6 +619,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#habita_en"/>
         <Class IRI="#habitat"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tiene_en_su_cuerpo"/>
+        <Class IRI="#animal"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#tiene_sangre"/>
